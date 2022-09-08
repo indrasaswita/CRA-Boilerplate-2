@@ -17,7 +17,8 @@ const Wrapper
 		position: relative;
 		content: "\\0020";
 
-		background: url('${(p: WrapperProps) => p.image}');
+		background-color: white;
+		background-image: url('${(p: WrapperProps) => p.image}');
 		background-position: center;
 		background-size: cover;
 		background-repeat: no-repeat;

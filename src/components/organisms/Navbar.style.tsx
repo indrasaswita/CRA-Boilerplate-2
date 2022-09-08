@@ -23,7 +23,7 @@ const Wrapper
 		display: flex;
 		padding: ${VARS.page.paddingX};
 		gap: calc(10px + .8vw);
-		background-color: white;
+		background-color: #EEE;
 
 		.avatar {
 			margin: calc(5px + .1vw) 0;

@@ -50,6 +50,7 @@ body {
   margin: 0;
   font-family: Poppins;
   color: #333;
+  background-color: #EEE;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
