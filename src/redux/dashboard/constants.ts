@@ -1,0 +1,4 @@
+export const DASHBOARD_UPDATE: string = "DASHBOARD_UPDATE"
+export const DASHBOARD_ALBUM_UPDATE: string = "DASHBOARD_ALBUM_UPDATE"
+export const DASHBOARD_CLEAR: string = "DASHBOARD_CLEAR"
+export const DASHBOARD_LOADING: string = "DASHBOARD_LOADING"

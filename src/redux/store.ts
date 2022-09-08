@@ -1,10 +1,14 @@
 import { configureStore, ThunkAction, Action, EnhancedStore } from "@reduxjs/toolkit"
+import accountReducer from "./account/reducer"
+import dashboardReducer from "./dashboard/reducer"
 
 // root reducer
 export const store
 	: EnhancedStore<any>
 	= configureStore({
 		reducer: {
+			account: accountReducer,
+			dashboard: dashboardReducer,
 		},
 	})
 

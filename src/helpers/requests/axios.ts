@@ -10,7 +10,7 @@ const coreUrl
 	: (url: string) => string
 	= (url: string) => {
 		return [
-			`${CONFIG.backendUrl}/api`,
+			`${CONFIG.backendUrl}`,
 			removeLeadingSlash(url),
 		].join("/")
 	}
