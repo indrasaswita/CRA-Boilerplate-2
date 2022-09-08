@@ -1,8 +1,9 @@
 export type AccountState = {
-	walletAddress: string | null,
-	jwtToken: string | null,
-	// nonce: string | null,
-	// signature: string | null,
-	// signMessage: string | null,
+	isVerified: boolean,
+	jobTitle: string,
+	name: string,
+	profPic: string,
+	email?: string,
+	location?: string,
 	loading: boolean,
 }

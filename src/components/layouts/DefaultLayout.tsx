@@ -1,10 +1,11 @@
 import React, { ReactNode, useEffect, useState } from "react"
+import { AccountState } from "../../redux/account/types"
 import Navbar from "../organisms/Navbar"
 import Wrapper from "./DefaultLayout.style"
 
 export type DefaultLayoutProps = {
 	children?: ReactNode,
-}
+} & AccountState
 
 export const DefaultLayout
 	: React.FunctionComponent<DefaultLayoutProps>
@@ -20,14 +21,13 @@ export const DefaultLayout
 					: string
 					= window.scrollY > currScrollY ? "bottom" : "up"
 
-				if (window.scrollY > 10
+				if (window.scrollY > 40
 					&& scrollDir === "up") {
 					setNavbarActive(true)
 				} else {
 					setNavbarActive(false)
 				}
 
-				console.log(currScrollY, window.scrollY)
 				currScrollY = window.scrollY
 			}
 

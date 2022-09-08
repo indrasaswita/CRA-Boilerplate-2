@@ -1,9 +1,11 @@
 import {
 	faLocationDot as fasLocationDot,
 	faEnvelope as fasEnvelope,
+	faCheckCircle as fasCheckCircle,
 } from "@fortawesome/pro-solid-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import React from "react"
+import MenuIcon from "../../assets/icons/MenuIcon"
 import Avatar from "../atoms/Avatar"
 import Wrapper from "./Navbar.style"
 
@@ -31,8 +33,17 @@ export const Navbar
 				/>
 				<div className="profile-detail">
 					<div className="name">
-						{props.name}
+						{props.name}&nbsp;
+						<FontAwesomeIcon
+							icon={fasCheckCircle}
+							fixedWidth
+						/>
 					</div>
+
+					<div className="menu-button">
+						<MenuIcon />
+					</div>
+
 					<div className="job-title">
 						{props.jobTitle}
 					</div>

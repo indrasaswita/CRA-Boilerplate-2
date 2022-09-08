@@ -1,23 +1,19 @@
 import { useSelector } from "react-redux"
-import { DashboardAlbumState, DashboardPhotoState, DashboardState } from "../dashboard/types"
+import { AccountState } from "../account/types"
 import { RootState } from "../store"
 
-const useDashboardRedux
+const useAccountRedux
 	: () => {
-		state: DashboardState,
-		albums: DashboardAlbumState[] | null,
-		photos: DashboardPhotoState[] | null,
+		state: AccountState,
 	}
 	= () => {
 		const state
-			: DashboardState
-			= useSelector((state: RootState) => state.dashboard)
+			: AccountState
+			= useSelector((state: RootState) => state.account)
 
 		return {
 			state,
-			albums: state?.albums || null,
-			photos: state?.photos || null,
 		}
 	}
 
-export default useDashboardRedux
+export default useAccountRedux

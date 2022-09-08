@@ -23,6 +23,26 @@ const Wrapper
 						.album-inner {
 							height: ${HEIGHT_CARD + PADDING_CARD * 2}px !important;
 							padding: 0 !important;
+
+							.card {
+								.thumbnail {
+									border-bottom-left-radius: calc(25px + 1.2vw);
+									border-bottom-right-radius: 0;
+								}
+							}
+						}
+					}
+
+					&:not(.slick-active) {
+						.card {
+							.card-inner {
+								
+								cursor: pointer;
+								.title {
+									display: none;
+									opacity: 0 !important;
+								}
+							}
 						}
 					}
 				}
@@ -60,9 +80,7 @@ export const AlbumCarouselItem
 			padding: 0 10px;
 
 			> .card-inner {
-				background: url('${(p: AlbumCarouselItemProps) => p.backgroundImage}');
-				background-size: cover;
-				background-position: center;
+				background-color: ${VARS.warning};
 				border-radius: 10px;
 
 				height: 100%;
@@ -72,12 +90,27 @@ export const AlbumCarouselItem
 				flex-direction: column;
 				// justify-content: flex-end;
 				align-items: flex-start;
-				padding: 0 calc(20px + 1vw);
+
+				.thumbnail {
+					background: url('${(p: AlbumCarouselItemProps) => p.backgroundImage}');
+					background-size: cover;
+					background-position: center;
+					content: "\\0020";
+					flex: 1;
+					width: 100%;
+					border-radius: inherit;
+				}
 
 				.title {
-					position: absolute;
+					padding: 0 calc(20px + 1vw);
 					bottom: 0;
-					padding: calc(10px + .5vw) 0;
+					padding: calc(10px + .5vw) calc(20px + .8vw);
+					transition: .2s opacity;
+
+					font-weight: 600;
+					font-size: 120%;
+					opacity: .8;
+					text-transform: capitalize;
 				}
 			}
 		}

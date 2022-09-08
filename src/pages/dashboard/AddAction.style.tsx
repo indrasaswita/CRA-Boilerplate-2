@@ -22,10 +22,10 @@ const Wrapper
 		box-shadow: 0 5px 20px rgba(0,0,0,.5); 
 
 		position: sticky;
-		bottom: 5vh;
-		left: 90vw;
-		width: 5vw;
-		height: 5vw;
+		bottom: calc(20px + 2vw);
+		left: calc(100vw - 60px - 6vw);
+		width: min(calc(40px + 2.5vw), 70px);
+		height: min(calc(40px + 2.5vw), 70px);
 
 		transition: .2s all;
 

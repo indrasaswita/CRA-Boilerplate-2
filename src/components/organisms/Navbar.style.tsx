@@ -13,6 +13,9 @@ const Wrapper
 			position: sticky;
 			top: 0;
 			z-index: 9999;
+
+			border-bottom: 1px solid #4447;
+			box-shadow: 0 10px 10px rgba(0,0,0,.3);
 		` : `
 			position: relative;
 		`}
@@ -27,12 +30,41 @@ const Wrapper
 		}
 
 		.profile-detail {
+			position: relative;
 			display: block;
 			flex: 1;
+
+			.menu-button {
+				display: inline-flex;
+				position: absolute;
+				right: 0;
+				top: 0;
+
+				width: calc(16px + 1.3vw);
+				height: calc(16px + 1.3vw);
+				min-width: calc(16px + 1.3vw);
+				min-height: calc(16px + 1.3vw);
+
+				margin: -10px;
+				padding: calc(10px + .5vw);
+				color: ${VARS.info};
+				transition: .2s all;
+				border-radius: 50%;
+				cursor: pointer;
+
+				&:hover {
+					background-color: ${VARS.info};
+					color: white;
+				}
+			}
 
 			.name {
 				font-size: 170%;
 				font-weight: 600;
+
+				svg {
+					color: ${VARS.info};
+				}
 			}
 
 			.job-title {

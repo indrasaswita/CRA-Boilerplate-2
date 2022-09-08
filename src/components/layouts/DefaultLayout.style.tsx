@@ -9,6 +9,7 @@ const Wrapper
 	= styled.div<WrapperProps>`
 		
 		position: relative;
+		min-height: 100vh;
 
 	`
 

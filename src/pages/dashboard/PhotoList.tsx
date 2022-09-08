@@ -2,7 +2,7 @@ import React from "react"
 import { connect } from "react-redux"
 import PinterestLayout from "../../components/layouts/PinterestLayout"
 import { DashboardPhotoState } from "../../redux/dashboard/types"
-import useDashboardRedux from "../../redux/hooks/account-redux"
+import useDashboardRedux from "../../redux/hooks/dashboard-redux"
 import Wrapper from "./PhotoList.style"
 
 interface PhotoListProps {
