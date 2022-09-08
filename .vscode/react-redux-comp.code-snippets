@@ -1,0 +1,42 @@
+{
+	// Place your new-rumah123 workspace snippets here. Each snippet is defined under a snippet name and has a scope, prefix, body and 
+	// description. Add comma separated ids of the languages where the snippet is applicable in the scope field. If scope 
+	// is left empty or omitted, the snippet gets applied to all languages. The prefix is what is 
+	// used to trigger the snippet and the body will be expanded and inserted. Possible variables are: 
+	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. 
+	// Placeholders with the same ids are connected.
+	// Example:
+	"comp-redux": {
+		"scope": "typescriptreact",
+		"prefix": "comp-redux",
+		"body": [
+			"import React from 'react'",
+			"import { connect } from 'react-redux'",
+			"import Wrapper from './${1:ClassName}.style'",
+			"",
+			"interface ${1:ClassName}Props {",
+			"",
+			"}",
+			"",
+			"interface DispatchProps {",
+			"",
+			"}",
+			"",
+			"export type Props = ${1:ClassName}Props & DispatchProps",
+			"export const ${1:ClassName}",
+			"\t: React.FunctionComponent<Props>",
+			"\t= (props: Props) => {",
+			"\t\treturn (",
+			"\t\t\t<Wrapper>",
+			"\t\t\t</Wrapper>",
+			"\t\t)",
+			"\t}",
+			"",
+			"export default connect(null, {",
+			"",
+			"})(${1:ClassName})",
+			"",
+		],
+		"description": "React Redux Component Template"
+	}
+}
