@@ -13,7 +13,8 @@ const Wrapper
 		margin: 0;
 		padding: 0;
 		border-radius: 10px;
-		background: url('${(p: WrapperProps) => p.url}');
+		background-color: #aaa;
+		background-image: url('${(p: WrapperProps) => p.url}');
 		background-size: cover;
 		background-position: center;
 		background-repeat: no-repeat;

@@ -24,12 +24,16 @@ export const PhotoList
 
 		return (
 			<Wrapper>
-				<PinterestLayout
-					photoUrls={photos
-						?.map((
-							photo: DashboardPhotoState,
-						) => photo.url) || []}
-				/>
+				{photos
+					&& photos.length > 0
+					&& (
+						<PinterestLayout
+							photoUrls={photos
+								?.map((
+									photo: DashboardPhotoState,
+								) => photo.url) || []}
+						/>
+					)}
 			</Wrapper>
 		)
 	}
